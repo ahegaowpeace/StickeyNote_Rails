@@ -1,0 +1,15 @@
+<h1>編集</h1>
+<%= form_with(model: @note, local: true) do |f| %>
+	<div>
+		<%= f.label :title, 'タイトル' %>
+		<%= f.text_field :title %>
+	</div>
+
+	<div>
+		<%= f.label :content, 'テキスト' %>
+		<%= f.text_field :content %>
+	</div>
+	<%= f.submit '更新' %>
+<% end %>
+
+<%= link_to 'TOP', root_path %>

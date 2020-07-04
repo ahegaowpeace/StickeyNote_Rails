@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
   def index
 		@note = Note.new
-		@notes = Note.all.page(params[:page]).per(100)
+		@notes = Note.all.page(params[:page]).per(1)
   end
 
 	def edit
